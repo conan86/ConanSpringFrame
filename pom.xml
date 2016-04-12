@@ -211,7 +211,7 @@
 			<version>5.1.6</version>
 		</dependency>
 
-		<!-- log -->
+		<!-- log4j -->
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
