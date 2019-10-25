@@ -52,12 +52,12 @@
     	<constructor-arg ref="dataSource" />
     </bean>
     
-    <bean id="userInfoDAO" class="com.tieto.titan.spring.jdbcTemplate.dao.UserInfoDAO">
+    <bean id="userInfoDAO" class="com.ans.conan.spring.jdbcTemplate.dao.UserInfoDAO">
     	<property name="jdbcTemplate" ref="jdbcTemplate" />
     	<property name="transactionManager" ref="transactionManager" />
     </bean>
     
-    <bean id="userInfoDAO2" class="com.tieto.titan.spring.jdbcTemplate.dao.UserInfoDAO2">
+    <bean id="userInfoDAO2" class="com.ans.conan.spring.jdbcTemplate.dao.UserInfoDAO2">
     	<property name="dataSource" ref="dataSource" />
     </bean>
     

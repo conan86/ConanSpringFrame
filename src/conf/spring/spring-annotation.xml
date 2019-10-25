@@ -17,5 +17,5 @@
 		<value>Tonight I Celebrate My Love</value>
 		<value>I believe I can fly</value>
 	</util:list>
-	<context:component-scan base-package="com.tieto.titan.spring.autowire"></context:component-scan>
+	<context:component-scan base-package="com.ans.conan.spring.autowire"></context:component-scan>
 </beans>

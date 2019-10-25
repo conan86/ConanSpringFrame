@@ -13,14 +13,14 @@
 	http://www.springframework.org/schema/aop/spring-aop.xsd
 	http://www.springframework.org/schema/util 
 	http://www.springframework.org/schema/util/spring-util.xsd">
-	<bean id="audience" class="com.tieto.titan.spring.aop.Audience"></bean>
+	<bean id="audience" class="com.ans.conan.spring.aop.Audience"></bean>
 	<context:annotation-config />
 	 
-	<bean id="kenny" class="com.tieto.titan.spring.autowire.impl.Instrumentalist">
+	<bean id="kenny" class="com.ans.conan.spring.autowire.impl.Instrumentalist">
 	</bean>
-	<bean id="piano" class="com.tieto.titan.spring.autowire.impl.Piano" />
-	<bean id="saxophone" class="com.tieto.titan.spring.autowire.impl.Saxophone" />
-	<bean id="songSelector" class="com.tieto.titan.spring.autowire.impl.SongSelector" />
+	<bean id="piano" class="com.ans.conan.spring.autowire.impl.Piano" />
+	<bean id="saxophone" class="com.ans.conan.spring.autowire.impl.Saxophone" />
+	<bean id="songSelector" class="com.ans.conan.spring.autowire.impl.SongSelector" />
 	<util:list id="songs">
 		<value>My Heart will go on</value>
 		<value>Just one last dance</value>
@@ -33,17 +33,17 @@
 	<!--  
 	<aop:config>
 		<aop:aspect ref="audience">
-			<aop:before pointcut="execution(* com.tieto.titan.spring.autowire.Performer.perform(..))" method="takeSeats"/>
-			<aop:before pointcut="execution(* com.tieto.titan.spring.autowire.Performer.perform(..))" method="turnoffCellPhones"/>
-			<aop:after-returning pointcut="execution(* com.tieto.titan.spring.autowire.Performer.perform(..))" method="applaud"/>
-			<aop:after-throwing pointcut="execution(* com.tieto.titan.spring.autowire.Performer.perform(..))" method="demandRefound"/>
+			<aop:before pointcut="execution(* Performer.perform(..))" method="takeSeats"/>
+			<aop:before pointcut="execution(* Performer.perform(..))" method="turnoffCellPhones"/>
+			<aop:after-returning pointcut="execution(* Performer.perform(..))" method="applaud"/>
+			<aop:after-throwing pointcut="execution(* Performer.perform(..))" method="demandRefound"/>
 		</aop:aspect>
 	</aop:config>
 	-->
 	
 	<aop:config>
 		<aop:aspect ref="audience">
-			<aop:pointcut expression="execution(* com.tieto.titan.spring.autowire.Performer.perform(..))" id="performance"/>
+			<aop:pointcut expression="execution(* com.ans.conan.spring.autowire.Performer.perform(..))" id="performance"/>
 			<aop:before pointcut-ref="performance" method="takeSeats"/>
 			<aop:before pointcut-ref="performance" method="turnoffCellPhones"/>
 			<aop:after-returning pointcut-ref="performance" method="applaud"/>
