@@ -49,3 +49,5 @@ Temporary Items
 /target/
 /bin/
 /photos/
+/.idea
+/ConanSpringFrame.iml
